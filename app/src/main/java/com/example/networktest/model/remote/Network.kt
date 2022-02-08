@@ -8,6 +8,7 @@ import android.util.Log
 import androidx.fragment.app.FragmentActivity
 import com.example.networktest.model.presentation.BookItem
 import com.example.networktest.model.presentation.BookResponse
+import com.example.networktest.model.presentation.ImageItem
 import com.example.networktest.model.presentation.VolumeItem
 import org.json.JSONObject
 import java.io.InputStream
@@ -88,7 +89,8 @@ private fun convertionToPresentationdata(deSerialized: String): BookResponse{
         }
         val volumeItem = VolumeItem(
             title,
-            emptyList()
+            authorsList,
+            ImageItem("")
 //            authors as List<String>
         )
 
